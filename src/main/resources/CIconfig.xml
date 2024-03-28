@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <context:component-scan base-package="org.ConstructorInjection"></context:component-scan>
+
+    <!-- this is our beans -->
+    <bean name="certi1" class="org.ConstructorInjection.Certi">
+        <constructor-arg value="Android using Kotlin" />
+    </bean>
+    <bean name="person1" class="org.ConstructorInjection.Person">
+        <constructor-arg value="Happy Singh"/>
+        <constructor-arg value="85"/>
+        <constructor-arg ref="certi1" />
+        <constructor-arg>
+            <list>
+                <value>Hello</value>
+                <value>Hello</value>
+                <value>Everyone</value>
+            </list>
+        </constructor-arg>
+    </bean>
+    <bean class="org.ConstructorInjection.Addition" name="add1">
+        <constructor-arg value="12" type="int" index="1" />
+        <constructor-arg value="27" type="int" index="0" />
+    </bean>
+
+</beans>
+

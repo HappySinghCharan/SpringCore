@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <context:component-scan base-package="org.example"></context:component-scan>
+
+    <!-- this is our beans -->
+
+    <bean class="org.example.Student" id="Stu1" >
+        <property name="id" value="2331" />
+        <property name="name" value="Happy Singh" />
+        <property name="address" value="Jaipur" />
+    </bean>
+
+    <bean class="org.example.Student" id="Stu2" >
+        <property name="id" value="2335" />
+        <property name="name" value="Ajay Singh" />
+        <property name="address" value="Jaipur" />
+    </bean>
+
+</beans>
+
